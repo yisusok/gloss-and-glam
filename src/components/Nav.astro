@@ -2,9 +2,9 @@
     <nav class="nav-container">
     <icons>
         <h1>
-            <span>GLOSS</span>
-            <span>&</span>
-            <span>GLAM</span>
+            <span class="gloss">GLOSS</span>
+            <span class="and">&</span>
+            <span class="glam">GLAM</span>
         </h1>
     </icons>
 
@@ -38,6 +38,17 @@
         display: flex;
         justify-content: space-evenly;
 
+    }
+
+    .gloss{
+        color: white;
+        font-weight: bolder;
+    }
+    .and{
+        filter: drop-shadow(1rem 1rem 1rem 1rem white);
+    }
+    .glam{
+        color:rgba(206, 165, 97, 1);
     }
 
     .links-nav{
