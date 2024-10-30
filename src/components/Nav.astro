@@ -1,6 +1,6 @@
 <div class="center">
     <nav class="nav-container">
-    <icons>
+    <icons class="name">
         <h1>
             <span class="gloss">GLOSS</span>
             <span class="and">&</span>
@@ -22,9 +22,9 @@
 
 
     <buttons class="login-container">
-        <a class="login-button" href=""><img src="../../public/Shop" alt="carrito"></a>
-        <button class="login-button"><img src="../../public/lupa" alt="lupa-buscar"></button>
-        <a class="login-button" href="">Sign Up</a>
+        <a class="button-shop login-gap" href=""><img src="\Shop.svg" alt="carrito"></a>
+        <button class="button-lupa login-gap"><img src="\lupa.svg" alt="lupa-buscar"></button>
+        <a class="login-signup login-gap" href="">Sign Up</a>
     </buttons>
 </nav>
 </div>
@@ -35,9 +35,15 @@
         align-items: center;
     }
     .nav-container{
+        margin-top: 1rem;
         display: flex;
         justify-content: space-evenly;
+        font-weight: lighter;
+    }
 
+    .name{
+        display: flex;
+        align-items: center;
     }
 
     .gloss{
@@ -45,10 +51,12 @@
         font-weight: bolder;
     }
     .and{
-        filter: drop-shadow(1rem 1rem 1rem 1rem white);
+        filter: drop-shadow(0px 0px 2px white);
+        font-weight: bolder;
     }
     .glam{
         color:rgba(206, 165, 97, 1);
+        font-weight:lighter ;
     }
 
     .links-nav{
@@ -62,6 +70,11 @@
 
 
         &:hover a{
+            color: #CEA561;
+            border-bottom: .1rem solid;
+            
+        }
+        &:active a{
             color: #CEA561;
             border-bottom: .1rem solid;
             
@@ -81,16 +94,55 @@
     }
     
     
-    .login-button{
-        padding: 1rem;
+    .button-shop{
+        display: flex;
+        background-color: #CEA561;
+        width: 32px;
+        height: 32px;
+        border-radius: 1rem;
+        justify-content: center;
+        align-items: center;
 
+    }
+
+    .button-lupa{
+        display: flex;
+        background-color: #CEA561;
+        width: 32px;
+        height: 32px;
+        border-radius: 1rem;
+        justify-content: center;
+        align-items: center;
+        border-style:none ;
+    }
+
+    .login-signup{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #CEA561;
+        width:8rem;
+        height:3rem;
+        border-radius: 12px;
+        color: black;
+        text-decoration: none;
+
+        &:hover{
+            opacity: 80%;
+        }
+    }
+
+    .login-gap{
+        margin: .5rem;
     }
 
 
 
     .center{
+        z-index: 1;
+        position: fixed;
+        width: 100%;
         flex-direction: column;
         align-items: center;
-        background-color:black ;
     }
 </style>
