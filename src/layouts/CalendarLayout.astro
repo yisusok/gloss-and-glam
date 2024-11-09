@@ -1,0 +1,134 @@
+---
+import Calendar from '../components/Calendar.astro';
+---
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=PT+Serif&family=Roboto+Mono&family=Work+Sans&display=swap" rel="stylesheet">
+
+<div class="container">
+    <div class="ctext">
+        
+        <center>
+            <h2>MAKE AN APPOINTMENT</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce condimentum justo sit amet dui feugiat, ut consectetur lacus consectetur.
+            </p>
+        </center>
+
+        <div class="back">
+            
+            <Calendar/>
+            
+            <h2 class="select">Select a Time</h2>
+    
+            <div class="times">
+                <a href="#">8:30 am - 9:30 am</a>
+                <a href="#">9:30 am - 10:30 am</a>
+                <a href="#">10:30 am - 11:30 am</a>
+                <a href="#">11:30 am - 12:30 pm</a>
+            </div>
+    
+            <div class="inputs">
+                <input type="text" placeholder="Enter your name*">
+                <input type="text" placeholder="Enter your Email*">
+                <input type="text" placeholder="Enter Phone Number*">
+                <input type="text" placeholder="Select service">
+            </div>
+
+            <a class="finalbtn" href="#">Book appointment</a>
+        </div>
+
+
+    </div>
+</div>
+    
+<style>
+
+    .finalbtn{
+        width: Hug (215px)px;
+        height: Hug (60px)px;
+        padding: 18px 36px 18px 36px;
+        gap: 10px;
+        border-radius: 1rem;
+        opacity: 0px;
+        margin-top: 1.3rem;
+    }
+
+    .inputs{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    input{
+        border-radius: 1rem;
+        width: 35rem;
+        height: 4rem;
+        margin: 10px;
+        background-color:rgba(43, 43, 43, 1);
+        border: 1px solid rgba(255, 255, 255, 0.3)
+    }
+
+    .select{
+        padding: 5rem 19rem 1rem;
+    }
+    
+    .times{
+        display: flex;
+    }
+
+    a{
+        display: flex;
+        text-decoration: none;
+        color: white;
+        border: 1px solid rgb(206, 165, 97);
+        padding: 1rem;
+        border-radius: 1rem;
+        margin: .5rem;
+
+        &:hover{
+            background-color:rgb(206, 165, 97);
+            color: black;
+        }
+    }
+
+    center{
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .container{
+        
+        display: flex;
+        justify-content: center;
+        background-color: rgba(21, 21, 21);
+    }
+
+    .ctext{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .back{
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            flex-wrap:wrap;
+    }
+
+    h2{
+        color: white;
+        font-family: Cormorant Garamond;
+        font-weight: lighter;
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    p{
+        color:rgba(255, 255, 255, 0.7);
+        font-family: Cormorant Garamond;
+        font-weight: lighter;
+        font-size: 1.3rem;
+    }
+</style>
